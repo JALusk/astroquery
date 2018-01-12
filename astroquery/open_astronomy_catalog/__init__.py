@@ -25,6 +25,9 @@ class Conf(_config.ConfigNamespace):
               'Time limit for connecting to template_module server.'
               )
 
-from .core import OACClass
+conf = Conf()
+from .core import OAC, OACClass
 
-__all__ = ['OACClass']
+__all__ = ['OAC', 'OACClass',
+           'Conf', 'conf',
+           ]
