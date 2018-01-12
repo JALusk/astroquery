@@ -5,7 +5,7 @@ Open Astronomy Catalog Query Tool
 
 .. topic:: Revision History
 
-    Created as part of the Hack Together Day at AAS 231
+    Created as part of the Hack Together Day at AAS 231 in 2018
 
     :Originally contributed by: Jeremy Lusk (jeremy.lusk@gmail.com)
 """
