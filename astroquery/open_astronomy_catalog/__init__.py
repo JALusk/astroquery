@@ -1,3 +1,15 @@
+# Licensed under a 3-clause BSD style license - see LICENSE.rst
+"""
+Open Astronomy Catalog Query Tool
+======================================================
+
+.. topic:: Revision History
+
+    Created as part of the Hack Together Day at AAS 231
+
+    :Originally contributed by: Jeremy Lusk (jeremy.lusk@gmail.com)
+"""
+
 from astropy import config as _config
 
 class Conf(_config.ConfigNamespace):
@@ -5,16 +17,14 @@ class Conf(_config.ConfigNamespace):
     Configuration parameters for `astroquery.template_module`.
     """
     server = _config.ConfigItem(
-        ['http://dummy_server_mirror_1',
-         'http://dummy_server_mirror_2',
-         'http://dummy_server_mirror_n'],
-        'Name of the template_module server to use.'
-        )
+            ['https://api.astrocats.space/'],
+            'Name of the open_astronomy_catalog server to use.'
+            )
     timeout = _config.ConfigItem(
-        30,
-        'Time limit for connecting to template_module server.'
-        )
+              30,
+              'Time limit for connecting to template_module server.'
+              )
 
-from .core import QueryClass
+from .core import OACClass
 
-__all__ = ['QueryClass']
+__all__ = ['OACClass']
