@@ -26,7 +26,7 @@ from . import conf
 
 
 # export all the public classes and methods
-__all__ = ['Template', 'TemplateClass']
+__all__ = ['OAC', 'OACClass']
 
 # declare global variables and constants if any
 
@@ -34,7 +34,7 @@ __all__ = ['Template', 'TemplateClass']
 # Now begin your main class
 # should be decorated with the async_to_sync imported previously
 @async_to_sync
-class TemplateClass(BaseQuery):
+class OACClass(BaseQuery):
 
     """
     Not all the methods below are necessary but these cover most of the common
