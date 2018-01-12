@@ -117,8 +117,7 @@ class OACClass(BaseQuery):
         # All this parsing may be done in a separate private `_args_to_payload`
         # method for cleaner code.
 
-        request_payload['object_name'] = object_name
-        # similarly fill up the rest of the dict ...
+        self.URL += object_name
 
         if get_query_payload:
             return request_payload
@@ -202,7 +201,7 @@ class OACClass(BaseQuery):
             # return raw result/ handle in some way
             pass
 
-        return Table()
+        return response.json()
 
     # Image queries do not use the async_to_sync approach: the "synchronous"
     # version must be defined explicitly.  The example below therefore presents
@@ -323,7 +322,7 @@ class OACClass(BaseQuery):
 
 
 # the default tool for users to interact with is an instance of the Class
-Template = TemplateClass()
+OAC = OACClass()
 
 # once your class is done, tests should be written
 # See ./tests for examples on this
